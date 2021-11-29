@@ -6,23 +6,23 @@
 #
 default: &default
   adapter: postgresql
-  host: fanny.db.elephantsql.com
-  user: otytzrmz
-  password: hq5iSLwMM5671KUrrGu-eLsxwIeZkgMU
+  host: john.db.elephantsql.com
+  user: ahzinwfp
+  password: n-pgmzBXXMRxEIzlEH14SYvxXbuPpSrt
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
-  database: otytzrmz
+  database: ahzinwfp
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: test_otytzrmz
+  database: test_ahzinwfp
 
 production:
   <<: *default
-  database: prod_otytzrmz
+  database: prod_ahzinwfp
