@@ -1,0 +1,36 @@
+<h4>Items</h4>
+<table class="cart-table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <% items.each do |item| %>
+    <tr>
+      <td><img src="<%= "data:image/png;base64, #{item.imgPath}" %>" class="Menu-Item--image" alt="NOT AVAILABLE"></td>
+      <td><%= item.menu_item_name %></td>
+      <td>Rs. <%= item.menu_item_price %></td>
+       <td><%= item.menu_item_quantity %></td>
+      <td>Rs. <%= item.menu_item_price * item.menu_item_quantity %></td>
+      <% if item.menu_item_quantity > 0 %>
+        <td>
+          <%= form_with(url: "/cart_items/#{item.id}", method: "delete") do %>
+            <%= submit_tag "Delete" %>
+          <% end %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><h2>Total :</h2></td>
+    <td><h2> Rs. <%= @total %></h2></td>
+  </tr>
+</table>

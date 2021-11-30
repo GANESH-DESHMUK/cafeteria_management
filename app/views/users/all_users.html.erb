@@ -1,0 +1,35 @@
+<div>
+  <div class="Title">Users</div>
+  <div class="CreateUser">
+    <div class="Btns--admin">
+      <%= link_to "Create User", create_user_path %>
+    </div>
+  </div>
+  <div class="SubTitle">Clerks</div>
+  <% @clerks.each do |clerk| %>
+    <div class="Order--UserDetails All-User-Div">
+      <div>Name</div>
+      <div>:</div>
+      <div><%= clerk.first_name %></div>
+
+      <div>Email</div>
+      <div>:</div>
+      <div><%= clerk.email %></div>
+    </div>
+  <% end %>
+</div>
+
+<div>
+  <div class="SubTitle">Customers</div>
+  <% @customers.each do |customer| %>
+    <div class="Order--UserDetails All-User-Div">
+      <div>Name</div>
+      <div>:</div>
+      <div><%= customer.first_name %></div>
+
+      <div>Email</div>
+      <div>:</div>
+      <div><%= customer.email %></div>
+    </div>
+  <% end %>
+</div>

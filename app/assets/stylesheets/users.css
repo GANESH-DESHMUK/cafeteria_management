@@ -1,0 +1,133 @@
+.Form-section {
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.NewUsers--title {
+  max-width: 460px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 50px;
+  font-size: 30px;
+}
+.Form--input {
+  font-size: 20px;
+  padding: 8px;
+}
+.FormInput--label {
+  color: rgb(248, 247, 247);
+  margin-bottom: 8px;
+}
+
+.Form--submit {
+  font-size: 20px;
+  padding: 10px;
+  background-color: #22a545;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+}
+.section-sign {
+  max-width: 460px;
+  margin: 0 auto;
+}
+input {
+  background-color: rgba(184, 104, 104, 0.377);
+  color: white;
+  border: none;
+  outline: none;
+}
+.Cart--Customer-Details {
+  margin: 0 auto;
+  max-width: 300px;
+}
+.All-User-Div {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1f4L1psysuOCjjwKr5_qxT1RBxufh3J19zg&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25px;
+  max-width: 450px;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.CreateUser {
+  text-align: center;
+  margin: 20px;
+  margin-left: 85%;
+}
+select {
+  height: 40px;
+  width: 180px;
+  color: white;
+  background-color: rgb(124, 28, 28);
+  font-size: 16px;
+  outline: none;
+  border: none;
+  padding: 10px;
+}
+.Report-Search-Div {
+  width: 700px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+input[type="date"] {
+  height: 30px;
+}
+.Report-Show {
+  max-width: 700px;
+  margin: 0 auto;
+  align-items: center;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1f4L1psysuOCjjwKr5_qxT1RBxufh3J19zg&usqp=CAU");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+}
+.Report-Date {
+  font-size: 15px;
+  margin: 20px;
+}
+.Report--Head {
+  width: 400px;
+  font-size: 18px;
+  margin: 0 auto;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.Admin-chart {
+  margin: 20px;
+  background-color: rgb(247, 231, 225);
+  padding: 20px;
+}
+.Admin-Chart-Main-Div {
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: 22px;
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  row-gap: 40px;
+}
+
+.Report-Chart-Main-Div {
+  margin: 0 auto;
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.Report-chart {
+  margin: 10px;
+  background-color: rgb(247, 231, 225);
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

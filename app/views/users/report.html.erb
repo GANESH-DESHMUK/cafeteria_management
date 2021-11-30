@@ -1,0 +1,90 @@
+<div>
+  <div class="Report--Head"> See Report Between </div>
+  <%= form_with url: get_report_path do |form| %>
+    <div  class="Report-Search-Div">
+      <div class="Form-section">
+        <span>
+          Start Date :
+          <%= date_field_tag "start_date" %>
+        </span>
+      </div>
+
+      <div class="Form-section">
+        <span>
+          End Date :
+          <%= date_field_tag "end_date" %>
+        </span>
+      </div>
+
+      <div class="Form-section">
+        <%= form.submit "Show Report", class: "Form--submit" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+ <% if @report_data != nil %>
+  <div class="Report-Show">
+    <div class="Title">
+      <div>REPORT</div>
+      <div class="Report-Date"><%= @report_data[:start_date] %>  - <%= @report_data[:end_date] %></div>
+    </div>
+    <%= render partial: "stats", locals: {
+                 report: @report_data,
+               } %>
+
+     <h4>Max Ordered Item</h4>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+
+        <tr>
+          <td><img src="<%= "data:image/png;base64, #{@report_data[:max_item_ordered][:imgPath]}" %>" class="Item--image" alt="NOT AVAILABLE"></td>
+          <td><%= @report_data[:max_item_ordered][:menu_item_name] %></td>
+          <td>Rs. <%= @report_data[:max_item_ordered][:menu_item_price] %></td>
+            <td><%= @report_data[:max_item_quantity] %></td>
+          <td>Rs. <%= @report_data[:max_item_ordered][:menu_item_price] * @report_data[:max_item_quantity] %></td>
+        </tr>
+    </table>
+
+    <div class="Report-Chart-Main-Div">
+      <div>
+        <div>Order Status</div>
+        <div class="Report-chart">
+          <%= pie_chart @orders.group(:status).count, colors: ["brown", "coral", "#945944"] %>
+        </div>
+      </div>
+
+      <div>
+        <div>Orders on different days</div>
+        <div class="Report-chart">
+          <%= column_chart @orders.group_by_day(:created_at).count, colors: ["brown"] %>
+        </div>
+      </div>
+
+      <div>
+        <div>Distribution of Items in Orders</div>
+        <div class="Report-chart">
+          <%= column_chart @order_items.group(:menu_item_name).count, colors: ["brown"] %>
+        </div>
+      </div>
+
+      <div>
+        <div>Order Type</div>
+        <div class="Report-chart">
+          <%= pie_chart @orders.group(:order_customer_type).count, colors: ["brown", "coral", "#945944"] %>
+        </div>
+      </div>
+    </div>
+
+    <%= render partial: "orders-section", locals: {
+                 report: @report_data,
+               } %>
+  </div>
+ <% end %>

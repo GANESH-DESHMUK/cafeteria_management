@@ -1,0 +1,24 @@
+<h4>Items</h4>
+<table class="cart-table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <% items.each do |item| %>
+    <tr>
+      <td><img src="<%= "data:image/png;base64, #{item.imgPath}" %>" class="Item--image" alt="NOT AVAILABLE"></td>
+      <td><%= item.name %></td>
+      <td>Rs. <%= item.price %></td>
+      <% if showRemove %>
+        <td>
+          <%= form_with(url: "/menu_items/#{item.id}", method: "delete") do %>
+            <%= submit_tag "Remove" %>
+          <% end %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>

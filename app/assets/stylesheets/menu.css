@@ -1,0 +1,46 @@
+.MenuItems--table {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(236, 109, 109, 0.205);
+  padding: 15px;
+}
+.Menu--div {
+  padding: 20px;
+  padding-left: 0px;
+}
+.Btns--Menu {
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(70, 15, 15);
+  margin: 20px;
+  padding: 8px;
+}
+.Btns--Menu:hover {
+  background-color: rgb(48, 4, 4);
+}
+.Btns--Menu--btnDisabled {
+  background-color: rgb(230, 147, 52);
+  font-size: 15px;
+  text-align: center;
+  margin: 20px;
+  padding: 8px;
+}
+.MenuUpdate--btns {
+  display: flex;
+  margin: 0 auto;
+}
+.Menu--Header {
+  display: flex;
+  justify-content: space-between;
+}
+.Menus {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  column-gap: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.Menu-outer-div {
+  min-width: 50%;
+}

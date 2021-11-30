@@ -1,0 +1,34 @@
+<section class="section-sign">
+  <%= form_with(url: "/menu_items", method: "post") do |form| %>
+
+    <div class="Form-section">
+      <p class="FormInput--label">Menu Name: </p>
+      <% if @menu %>
+        <%= @menu[:name] %>
+        <%= hidden_field_tag :menu_id, @menu[:id] %>
+      <% else %>
+        <%= form.select :menu_id, @menus %>
+        <% # <%= form.number_field :menu_id, class: "Form--input" %>
+      <% end %>
+    </div>
+
+
+    <div class="Form-section">
+      <p class="FormInput--label">Item Name:</p>
+      <%= form.text_field :item_name, class: "Form--input" %>
+    </div>
+
+    <div class="Form-section">
+      <p class="FormInput--label">Item Price:</p>
+      Rs. <%= form.number_field :price, class: "Form--input", step: :any %>
+    </div>
+
+    <div class="Form-section">
+      <%= form.file_field :picture %>
+    </div>
+
+    <div class="Form-section">
+      <%= form.submit "Add Item", class: "Form--submit" %>
+    </div>
+  <% end %>
+</section>

@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+}
+body {
+  background-image: url("https://media.istockphoto.com/photos/modern-restaurant-interior-design-picture-id1211547141?b=1&k=20&m=1211547141&s=170667a&w=0&h=nPRsvYNpFhRiKW80dWpt4M-52tCyUyD6gRfs_Be63No=");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.Home--title {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.Home--authenticate {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.UserHeader {
+  margin-bottom: 50px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(87, 20, 20);
+  padding: 15px;
+}
+
+.Flash-error {
+  color: white;
+  background-color: darkred;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding: 8px;
+}
+.Header {
+  color: white;
+  font-weight: bolder;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 25px;
+  max-width: 400px;
+  display: flex;
+}
+.chef-img {
+  border-radius: 50%;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 30px;
+}
+.UserHome {
+  margin: 0 auto;
+  max-width: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.divButton {
+  background-color: rgb(148, 39, 39);
+  padding: 10px 15px;
+  margin: 30px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.divButton:hover {
+  transform: scale(1.1);
+}
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+a:hover {
+  color: white;
+}
+details {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(182, 62, 62, 0.39);
+  padding: 10px;
+  padding-bottom: 30px;
+  width: 700px;
+  margin: 0 auto;
+}
+.HomePage {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.Btns {
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+  background-color: brown;
+  margin: 10px;
+  padding: 10px;
+  width: 65px;
+  align-items: center;
+}
+.Btns:hover {
+  transform: scale(1.1);
+}
+.Homepage-signbtns {
+  width: 300px;
+  margin-top: 200px;
+  margin-left: 50px;
+}
+.Btns--admin {
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+  background-color: brown;
+  margin: 10px;
+  padding: 10px;
+  width: 150px;
+  align-items: center;
+}
+.Btns--admin:hover {
+  transform: scale(1.1);
+}
+.admin-HomePage {
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+td {
+  border-bottom: 1px solid darkslategray;
+  padding: 5px;
+}
+.Title {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.SubTitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_160652) do
+ActiveRecord::Schema.define(version: 2021_11_30_124838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "btree_gin"
@@ -37,37 +37,47 @@ ActiveRecord::Schema.define(version: 2021_11_29_160652) do
   enable_extension "xml2"
 
   create_table "cart_items", force: :cascade do |t|
-    t.bigint "cart_id"
+    t.bigint "order_id"
     t.bigint "menu_item_id"
     t.string "menu_item_name"
-    t.bigint "menu_item_price"
-    t.bigint "quantity"
-    t.bigint "price"
+    t.decimal "menu_item_price"
+    t.bigint "menu_item_quantity"
+    t.binary "imgPath"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "carts", force: :cascade do |t|
-    t.date "date"
     t.bigint "user_id"
-    t.datetime "delivered_at"
-    t.bigint "total_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "menu_categories", force: :cascade do |t|
-    t.string "name"
-    t.boolean "active"
+  create_table "current_orders", force: :cascade do |t|
+    t.bigint "menu_item_id"
+    t.string "menu_item_name"
+    t.decimal "menu_item_price"
+    t.bigint "menu_item_quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "total"
+    t.bigint "order_id"
+    t.binary "items_imgPath"
   end
 
   create_table "menu_items", force: :cascade do |t|
-    t.bigint "menu_category_id"
+    t.bigint "menu_id"
     t.string "name"
-    t.text "description"
-    t.bigint "price"
+    t.string "description"
+    t.decimal "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.binary "imgPath"
+  end
+
+  create_table "menus", force: :cascade do |t|
+    t.string "name"
+    t.boolean "active"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -76,30 +86,33 @@ ActiveRecord::Schema.define(version: 2021_11_29_160652) do
     t.bigint "order_id"
     t.bigint "menu_item_id"
     t.string "menu_item_name"
-    t.bigint "menu_item_price"
-    t.bigint "quantity"
-    t.bigint "price"
+    t.decimal "menu_item_price"
+    t.bigint "menu_item_quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.binary "imgPath"
   end
 
   create_table "orders", force: :cascade do |t|
-    t.date "date"
     t.bigint "user_id"
-    t.datetime "delivered_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status"
+    t.string "order_customer_type"
+    t.string "order_customer_name"
+    t.string "order_customer_email"
+    t.bigint "order_total"
+    t.date "placed_at"
+    t.date "delivered_at"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
-    t.string "last_name"
     t.string "email"
-    t.bigint "phone_no"
     t.string "password_digest"
-    t.string "role"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "role"
   end
 
 end

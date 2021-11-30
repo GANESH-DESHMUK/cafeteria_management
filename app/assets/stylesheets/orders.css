@@ -1,0 +1,179 @@
+.Orders--Title {
+  align-items: center;
+  display: flex;
+  padding: 10px;
+}
+.OrdersDisplay--Form {
+  margin-left: 55%;
+}
+.CurrentOrderItems {
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  font-size: 16px;
+  background-color: rgba(107, 40, 40, 0.568);
+  padding: 10px;
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: 3fr 3fr 2fr 4fr;
+  align-items: center;
+}
+.CurrentOrderItems:hover {
+  background-color: rgba(107, 40, 40, 1);
+}
+.CurrentOrderItems--itemName {
+  font-size: 20px;
+  font-weight: bold;
+}
+.CurrentOrderItems--AddBtn {
+  background-color: rgb(5, 170, 5);
+  color: white;
+  font-size: 15px;
+  margin-left: 15px;
+  border-radius: 10px;
+  outline: none;
+  padding: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.CurrentOrderItems--total {
+  text-align: right;
+  font-size: 16px;
+  padding-right: 85px;
+  font-weight: bold;
+}
+.CurrentOrderItems--quantity {
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.CurrentOrderItems--orderButton {
+  height: 40px;
+  width: 200px;
+  background-color: sandybrown;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.CurrentOrderItems--orderButton:hover {
+  transform: scale(1.1);
+}
+.CurrentOrderItems--orderBtnDiv {
+  margin-left: 40%;
+}
+.cart {
+  max-width: 700px;
+  margin: 0 auto;
+  align-items: center;
+  background-image: url("https://i0.wp.com/seekgif.com/uploads/menu-background-clipart-2.jpeg?h=250");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+}
+.cart-table {
+  width: 100%;
+  text-align: center;
+  border: 2px solid brown;
+  border-style: dashed;
+}
+.cart-Title {
+  width: 200px;
+  font-size: 20px;
+  color: brown;
+  margin: 0 auto;
+  font-weight: bolder;
+  align-items: center;
+}
+.cart-image {
+  height: 20px;
+  object-fit: contain;
+  margin-right: 10px;
+  color: brown;
+}
+.PendingOrders--div {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.Order--UserDetails {
+  padding: 20px;
+  width: 700px;
+  display: grid;
+  grid-template-columns: 4fr 1fr 7fr;
+  row-gap: 20px;
+  text-align: center;
+  color: sandybrown;
+  font-weight: bold;
+  font-size: 15px;
+}
+.Order--UserDetails:nth-child(odd) {
+  border-left: 1px solid black;
+}
+.Item--image {
+  height: 80px;
+  width: 100px;
+  border-radius: 10px;
+}
+.Order-New-Add-Item {
+  display: flex;
+  justify-content: space-around;
+}
+.CurrentOrderItems--Quantity-Input {
+  font-size: 19px;
+}
+.NewOrder-show-quantity {
+  font-size: 13px;
+  margin: 5px;
+  margin-top: 15px;
+  color: coral;
+}
+.Cart-BackButton {
+  width: 200px;
+  margin-left: 82%;
+  background-color: brown;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-right: 30px;
+}
+.EmptyDiv {
+  height: 200px;
+  width: 20%;
+  margin: 0 auto;
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(247, 170, 27);
+}
+.Empty-image {
+  height: 200px;
+}
+.Empty-image-div {
+  position: absolute;
+  opacity: 0.5;
+}
+.Empty-Text {
+  position: absolute;
+  padding-top: 80px;
+}
+.Order-MenuSelect {
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.Empty-WrappingDiv {
+  width: 250px;
+  margin: 0 auto;
+}
