@@ -1,6 +1,6 @@
 <section>
   <%= form_with url: users_path do |form| %>
-      <%= form.text_field :name, placeholder: "User Name", class: "m-2 p-1 text-xl bg-gray-200 rounded" %>
+      <%= form.text_field :first_name, placeholder: "User Name", class: "m-2 p-1 text-xl bg-gray-200 rounded" %>
       <%= form.select :role, ["Customer", "Billing Clerk", "Owner"], class: "m-1 p-1 text-xl bg-gray-200 rounded" %>
       <%= form.email_field :email, placeholder: "User Email", class: "m-2 p-1 text-xl bg-gray-200 rounded" %>
       <%= form.password_field :password, placeholder: "User Password", class: "m-2 p-1 text-xl bg-gray-200 rounded" %>
